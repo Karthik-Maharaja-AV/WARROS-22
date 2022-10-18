@@ -26,21 +26,22 @@ const CountdownTimer = ({CountdownTimeStampMs}) => {
 
     return (
         <div className=''>
-         
+            
+            
         <div className='flex items-center p-10 justify-center'>
             
-            <div className='flex divide-x p-10 text-white items-center divide-gray-200 justify-center w-screen  h-32 xl:w-3/6 bg-transparent font-bold text-sm  border-8 border-gray-800  xl:text-2xl'>
-           <div><span className=' xl:px-2'>{remainingTime.days}</span>
-           <span className=' xl:px-2'>days</span></div>
+            <div className='flex relative  divide-x p-10 text-white items-center divide-gray-200 justify-center w-screen  h-32 lg:w-3/6 bg-transparent font-bold text-xs md:text-lg border-8 border-gray-800 lg:text-lg xl:text-2xl'>
+           <div><span className=' px-1 xl:px-2'>{remainingTime.days}</span>
+           <span className=' lg:px-2 px-1'>days</span></div>
            <div>
-           <span className=' xl:px-2'>{remainingTime.hours}</span>
-           <span className=' xl:px-2'>hours</span>
+           <span className=' lg:px-2 px-1'>{remainingTime.hours}</span>
+           <span className=' lg:px-2 px-1'>hours</span>
            </div>
-           <div><span className=' xl:px-2'>{remainingTime.minutes}</span>
-           <span className=' xl:px-2'>minutes</span></div>
+           <div><span className=' lg:px-2 px-1'>{remainingTime.minutes}</span>
+           <span className=' lg:px-2 px-1'>minutes</span></div>
            <div>
-           <span className=' xl:px-2'>{remainingTime.seconds}</span>
-           <span className=' xl:px-2'>seconds</span>
+           <span className=' lg:px-2 px-1'>{remainingTime.seconds}</span>
+           <span className=' lg:px-2 px-1'>seconds</span>
            </div>
            
             </div>

@@ -3,11 +3,11 @@ import React from 'react';
 const Design = () => {
     return (
         <div className='zindex  flex items-center justify-center'>
-            <div className='flex items-center justify-center xl:py-80 py-40'>
-        <h1 className='z-40 flex relative items-center text-center justify-center xl:text-9xl text-6xl font-extrabold  xl:px-4 px-4  text-transparent bg-clip-text bg-gradient-to-br from-orange-600 via-yellow-600 to-orange-600 headingClass'>WARRO'S</h1>
+            <div className='flex items-center justify-center sm:py-72 lg:py-72 py-40'>
+        <h1 className='z-40 flex relative items-center text-center justify-center md:text-9xl sm:text-8xl text-6xl font-extrabold  lg:px-4 px-4  text-transparent bg-clip-text bg-gradient-to-br from-orange-600 via-yellow-600 to-orange-600 headingClass'>WARRO'S</h1>
           </div>
         <div className=''>
-         <div className="circle relative z-30 flex items-center justify-center "></div>
+         <div className="relative circle  z-30 flex items-center justify-center "></div>
       
         
         

@@ -3,12 +3,12 @@ import React,{useState} from 'react';
 const Navbar = () => {
     const [toggled, setToggle] = useState(false);
     const ul = "xl:flex xl:my-auto font-semibold xl:px-32 xl:gap-10 "
-    const open = ul + " absolute flex flex-col  w-screen bg-transparent h-max top-0 left-0 gap-6 text-center mt-16 -z-10";
+    const open = ul + " absolute flex flex-col bg-black  w-screen bg-transparent h-max top-0 p-10 border-4 left-0 gap-6 text-center mt-16 ";
     const closed = ul + " hidden";
     return (
         <div>
-            <nav className=' flex w-full bg-transparent border border-0 border-b-4 border-b-white px-6 lg:px-20 py-10 justify-between'>
-                <div className='xl:px-20'>
+            <nav className='relative z-50 flex w-full bg-transparent  border-0 border-b-4 border-b-white px-6 lg:px-20 py-10 justify-between'>
+                <div className='xl:px-20 '>
                 <img src="/logo.png.jpg" className='w-72' alt="" />
                 </div>
                 
@@ -21,12 +21,13 @@ const Navbar = () => {
                     </svg>
                 }
 
-            </button>
+                 </button>
 
                 <ul className={toggled ? open : closed}>
-                <li className="hover:text-white hover:underline"><a href="#about">Home</a></li>
-                <li className="hover:text-white hover:underline"><a href="#iccpc">About</a></li>
-                <li className="hover:text-white hover:underline"><a href="#commitee">Events</a></li>
+                <li className="hover:text-white hover:border-4 p-2 "><a href="#about">Home</a></li>
+                <li className="hover:text-white hover:border-4 p-2 "><a href="#iccpc">About</a></li>
+                <li className="hover:text-white hover:border-4 p-2 "><a href="#EVENTS">Events</a></li>
+                <li className="hover:text-white hover:border-4 p-2 "><a href="#foot">Contact Us</a></li>
                 </ul>
             </nav>
         </div>

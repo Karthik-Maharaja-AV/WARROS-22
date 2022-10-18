@@ -9,7 +9,7 @@ export default function Home() {
   
   return (
     <div className=''>
-   
+      <div id="particles-js"></div>
     
     </div>
   )
