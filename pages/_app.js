@@ -138,7 +138,7 @@ function MyApp({ Component, pageProps }) {
     
     <Design />
     <hr className='w-24'></hr>
-    <CountdownTimer CountdownTimeStampMs={1666601223000}/>
+    <CountdownTimer CountdownTimeStampMs={1668078000000}/>
     <hr className='w-24' />
     <Cards />
   
