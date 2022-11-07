@@ -6,6 +6,9 @@
 @tailwind utilities;
 
 
+.butt{
+  z-index: 99;
+}
 
 html,
 body {

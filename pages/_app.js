@@ -7,6 +7,7 @@ import Loading from '../Components/Loading'
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Footer from '../Components/Footer'
+import Button from '../Components/button'
 
 function MyApp({ Component, pageProps }) {
   const particlesInit = async (main) => {
@@ -23,124 +24,132 @@ function MyApp({ Component, pageProps }) {
       id="tsparticles"
       init={particlesInit}
 
-      options={{
-        "particles": {
-          "number": {
-            "value": 380,
-            "density": {
+      options={
+        {
+          "fullScreen": {
               "enable": true,
-              "value_area": 5000
-            }
+              "zIndex": 1
           },
-          "color": {
-            "value": "#ffff"
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 0
-            },
-            "image": {
-              "src": "img/github.svg",
-              "width": 100,
-              "height": 100
-            }
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-              "enable": false,
-              "speed": 1,
-              "opacity_min": 0.1,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 2,
-            "random": true,
-            "anim": {
-              "enable": false,
-              "speed": 40,
-              "size_min": 0.1,
-              "sync": false
-            }
-          },
-          "line_linked": {
-            "enable": false,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "grab"
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "push"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 140,
-              "line_linked": {
-                "opacity": 1
+          "particles": {
+              "number": {
+                  "value": 20,
+                  "density": {
+                      "enable": true,
+                      "area": 800
+                  }
+              },
+              "color": {
+                  "value": "#ffffff"
+              },
+              "shape": {
+                  "type": "circle"
+              },
+              "opacity": {
+                  "value": 0.5,
+                  "random": false,
+                  "animation": {
+                      "enable": false,
+                      "speed": 1,
+                      "minimumValue": 0.1,
+                      "sync": false
+                  }
+              },
+              "size": {
+                  "value": 5,
+                  "random": {
+                      "enable": true,
+                      "minimumValue": 1
+                  },
+                  "animation": {
+                      "enable": false,
+                      "speed": 40,
+                      "minimumValue": 0.1,
+                      "sync": false
+                  }
+              },
+              "lineLinked": {
+                  "enable": false,
+                  "distance": 150,
+                  "color": "#ffffff",
+                  "opacity": 0.4,
+                  "width": 1
+              },
+              "move": {
+                  "bounce": true,
+                  "enable": true,
+                  "speed": 5,
+                  "direction": "none",
+                  "random": false,
+                  "straight": false,
+                  "out_mode": "bounce",
+                  "attract": {
+                      "enable": false,
+                      "rotateX": 600,
+                      "rotateY": 1200
+                  }
               }
-            },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
-            }
+          },
+          "interactivity": {
+              "events": {
+                  "onHover": {
+                      "enable": false,
+                      "mode": "repulse",
+                      "parallax": {
+                          "enable": false,
+                          "force": 60,
+                          "smooth": 10
+                      }
+                  },
+                  "onClick": {
+                      "enable": "false",
+                      "mode": "push"
+                  },
+                  "resize": true
+              },
+              "modes": {
+                  "grab": {
+                      "distance": 400,
+                      "line_linked": {
+                          "opacity": 1
+                      }
+                  },
+                  "bubble": {
+                      "distance": 400,
+                      "size": 40,
+                      "duration": 2,
+                      "opacity": 0.8,
+                      "speed": 3
+                  },
+                  "repulse": {
+                      "distance": 200
+                  },
+                  "push": {
+                      "particles_nb": 4
+                  },
+                  "remove": {
+                      "particles_nb": 2
+                  }
+              }
+          },
+          "detectRetina": true,
+          "background": {
+              
+              "image": "",
+              "position": "50% 50%",
+              "repeat": "no-repeat",
+              "size": "cover"
           }
-        },
-        "retina_detect": true
-    }}
-    />
+      }
+      }/>
     <Navbar />
     
     <Design />
     <hr className='w-24'></hr>
+    
     <CountdownTimer CountdownTimeStampMs={1668078000000}/>
     <hr className='w-24' />
     <Cards />
+    <Button />
   
     <Footer />
     <Component {...pageProps} />
